@@ -1,3 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Team Task Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow">
+        <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+            <h1 class="text-2xl font-semibold">Team Task Management System</h1>
+            <nav class="space-x-4">
+                <a href="{{ route('login') }}" class="text-sm text-gray-600 hover:text-gray-900">Login</a>
+                <a href="{{ url('/invite') }}" class="text-sm text-gray-600 hover:text-gray-900">Request Invite</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-4">Collaborate. Meet. Pay. Achieve.</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    An enterprise-grade task and collaboration platform tailored for Kenyan institutions,
+                    SACCOs and corporate teams. Built with Laravel & Docker — includes task management,
+                    real-time chat, WebRTC meetings and M-Pesa integration.
+                </p>
+
+                <ul class="space-y-3 text-gray-700 mb-6">
+                    <li class="flex items-start"><span class="mr-3 text-indigo-600">•</span> Admin-controlled onboarding & verification</li>
+                    <li class="flex items-start"><span class="mr-3 text-indigo-600">•</span> Department-based roles & permissions</li>
+                    <li class="flex items-start"><span class="mr-3 text-indigo-600">•</span> Real-time chat & WebRTC video conferencing</li>
+                    <li class="flex items-start"><span class="mr-3 text-indigo-600">•</span> M-Pesa payments & fundraising</li>
+                </ul>
+
+                <div class="flex gap-4">
+                    <a href="{{ route('login') }}" class="px-5 py-3 bg-indigo-600 text-white rounded shadow">Get Started</a>
+                    <a href="{{ url('/docs') }}" class="px-5 py-3 border border-gray-200 rounded text-gray-700">Docs</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-xl font-semibold mb-3">Quick actions</h3>
+                <div class="space-y-2">
+                    <a class="block p-3 border rounded hover:bg-gray-50" href="{{ url('/admin/invitations') }}">Admin → Pending Invitations</a>
+                    <a class="block p-3 border rounded hover:bg-gray-50" href="{{ url('/meetings') }}">Meetings & Schedule</a>
+                    <a class="block p-3 border rounded hover:bg-gray-50" href="{{ url('/groups') }}">Groups & Contributions</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <h3 class="text-2xl font-semibold mb-4">Development status</h3>
+            <p class="text-gray-700">
+                Phase 1 scaffolding implemented: invite → register → admin approve flows (controllers, migration, requests, mail and tests).
+                To run locally, follow the steps below.
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-500">
+            © {{ date('Y') }} Team Task Management System — Built with Laravel
+        </div>
+    </footer>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
