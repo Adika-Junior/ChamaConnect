@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Notifications\UserApprovedNotification;
+use App\Notifications\UserRejectedNotification;
 use Illuminate\Http\Request;
 
 class AdminApprovalController extends Controller
@@ -18,7 +20,8 @@ class AdminApprovalController extends Controller
             'approved_by' => $request->user()->id,
         ]);
 
-        // TODO: send notification email
+        // Send notification email
+        $user->notify(new UserApprovedNotification($request->user()->name));
 
         return response()->json(['status' => 'active']);
     }
@@ -27,9 +30,14 @@ class AdminApprovalController extends Controller
     {
         $this->authorize('approve', $user);
 
+        $validated = $request->validate([
+            'reason' => 'nullable|string|max:500',
+        ]);
+
         $user->update(['status' => 'inactive']);
 
-        // TODO: send rejection email
+        // Send rejection email
+        $user->notify(new UserRejectedNotification($validated['reason'] ?? null));
 
         return response()->json(['status' => 'inactive']);
     }

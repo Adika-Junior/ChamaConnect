@@ -20,7 +20,7 @@ class InvitationMail extends Mailable
 
     public function build()
     {
-        $link = url('/register/' . $this->tokenModel->token);
+        $link = url('/auth/register/' . $this->tokenModel->token);
 
         return $this->subject('You are invited to join Team Task Management')
             ->view('emails.invitation')

@@ -1,0 +1,10 @@
+vendor
+.git
+.github
+.env
+node_modules
+npm-debug.log
+yarn-error.log
+docker-compose.override.yml
+storage
+public/storage

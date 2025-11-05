@@ -16,6 +16,20 @@ class InviteController extends Controller
 {
     public function invite(InviteRequest $request)
     {
+        // TEMP DEBUG: log request headers, auth and session to help diagnose
+        // failing tests that return 419. Remove this once debugging is done.
+        try {
+            $debug = [
+                'headers' => $request->headers->all(),
+                'user_id' => optional($request->user())->id,
+                'has_session' => session()->isStarted() ?? false,
+                'session_all' => session()->all(),
+            ];
+            file_put_contents(storage_path('logs/test-debug.log'), json_encode($debug) . PHP_EOL, FILE_APPEND);
+        } catch (\Throwable $e) {
+            // ignore logging errors during tests
+        }
+
         $this->authorize('create', User::class);
 
         $email = $request->input('email');

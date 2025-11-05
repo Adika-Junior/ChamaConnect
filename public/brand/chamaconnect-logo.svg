@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="ChamaConnect logo — community, growth, prosperity">
+
+  <defs>
+
+    <linearGradient id="g-teal" x1="0" x2="1" y1="0" y2="1">
+
+      <stop offset="0%" stop-color="#0F766E"/>
+
+      <stop offset="100%" stop-color="#10B981"/>
+
+    </linearGradient>
+
+    <linearGradient id="g-gold" x1="0" x2="1" y1="0" y2="1">
+
+      <stop offset="0%" stop-color="#F59E0B"/>
+
+      <stop offset="100%" stop-color="#FBBF24"/>
+
+    </linearGradient>
+
+    <linearGradient id="g-blue" x1="0" x2="1" y1="0" y2="1">
+
+      <stop offset="0%" stop-color="#0EA5E9"/>
+
+      <stop offset="100%" stop-color="#38BDF8"/>
+
+    </linearGradient>
+
+    <filter id="glow">
+
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+
+      <feMerge>
+
+        <feMergeNode in="coloredBlur"/>
+
+        <feMergeNode in="SourceGraphic"/>
+
+      </feMerge>
+
+    </filter>
+
+    
+
+    <!-- Paths for curved text -->
+
+    <path id="topTextPath" d="M 20,64 A 44,44 0 0,1 108,64" fill="none"/>
+
+    <path id="bottomTextPath" d="M 108,64 A 44,44 0 0,1 20,64" fill="none"/>
+
+    
+    <!-- Circular clip path -->
+    <clipPath id="circleClip">
+      <circle cx="64" cy="64" r="64"/>
+    </clipPath>
+
+  </defs>
+
+  
+
+  <!-- Circular white background -->
+  <circle cx="64" cy="64" r="64" fill="#FFFFFF"/>
+
+  
+
+  <!-- Outer circle boundary -->
+
+  <circle cx="64" cy="64" r="60" fill="none" stroke="#10B981" stroke-width="1.5" opacity="0.2"/>
+
+  
+
+  <!-- Background prosperity circle -->
+
+  <circle cx="64" cy="64" r="58" fill="#F0FDF4" opacity="0.15"/>
+
+  <circle cx="64" cy="64" r="56" fill="none" stroke="#10B981" stroke-width="1" stroke-dasharray="3 3" opacity="0.25"/>
+
+  
+
+  <!-- Growth arrow path (subtle background) -->
+
+  <path d="M30 85 Q45 70, 64 68 T98 55" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.2"/>
+
+  <polygon points="98,55 95,58 100,57" fill="#10B981" opacity="0.2"/>
+
+  
+
+  <!-- Central platform/foundation -->
+
+  <ellipse cx="64" cy="90" rx="38" ry="5" fill="#0F766E" opacity="0.12"/>
+
+  
+
+  <!-- Person 1 (Left - Teal) - Success pose with coin -->
+
+  <g transform="translate(32, 55)">
+
+    <ellipse cx="0" cy="20" rx="7" ry="10" fill="url(#g-teal)"/>
+
+    <circle cx="0" cy="5" r="5.5" fill="url(#g-teal)"/>
+
+    <path d="M-7 16 L-11 10" stroke="url(#g-teal)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M7 16 L11 10" stroke="url(#g-teal)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M-3 29 L-4 36" stroke="url(#g-teal)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M3 29 L4 36" stroke="url(#g-teal)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <circle cx="-11" cy="8" r="2.5" fill="url(#g-gold)" stroke="#F59E0B" stroke-width="0.8"/>
+
+    <text x="-11" y="10" font-size="3.5" fill="#B45309" text-anchor="middle" font-weight="bold">$</text>
+
+  </g>
+
+  
+
+  <!-- Person 2 (Center - Blue) - Reaching up/growth -->
+
+  <g transform="translate(64, 50)">
+
+    <ellipse cx="0" cy="23" rx="8" ry="11" fill="url(#g-blue)"/>
+
+    <circle cx="0" cy="6" r="6" fill="url(#g-blue)"/>
+
+    <path d="M-8 19 L-9 11" stroke="url(#g-blue)" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M8 19 L13 8" stroke="url(#g-blue)" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M-4 33 L-5 40" stroke="url(#g-blue)" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M4 33 L5 40" stroke="url(#g-blue)" stroke-width="3" stroke-linecap="round"/>
+
+    <g transform="translate(13, 4)">
+
+      <path d="M0 0 Q-2 -3, 0 -6" fill="none" stroke="#10B981" stroke-width="1.5"/>
+
+      <circle cx="-2" cy="-4" r="1.3" fill="#10B981"/>
+
+      <circle cx="2" cy="-5" r="1.3" fill="#10B981"/>
+
+      <circle cx="0" cy="-7" r="1.3" fill="#10B981"/>
+
+    </g>
+
+  </g>
+
+  
+
+  <!-- Person 3 (Right - Gold) - Collaborative reaching -->
+
+  <g transform="translate(96, 58)">
+
+    <ellipse cx="0" cy="19" rx="7" ry="9" fill="url(#g-gold)"/>
+
+    <circle cx="0" cy="5" r="5.5" fill="url(#g-gold)"/>
+
+    <path d="M-7 16 L-15 15" stroke="url(#g-gold)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M7 16 L4 11" stroke="url(#g-gold)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M-3 27 L-4 34" stroke="url(#g-gold)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M3 27 L4 34" stroke="url(#g-gold)" stroke-width="2.5" stroke-linecap="round"/>
+
+  </g>
+
+  
+
+  <!-- Connection lines showing community -->
+
+  <path d="M39 70 Q50 66, 60 68" stroke="#0F766E" stroke-width="1.5" opacity="0.25" fill="none" stroke-dasharray="2 2"/>
+
+  <path d="M68 68 Q78 70, 88 72" stroke="#0F766E" stroke-width="1.5" opacity="0.25" fill="none" stroke-dasharray="2 2"/>
+
+  
+
+  <!-- Prosperity coins floating -->
+
+  <g opacity="0.7">
+
+    <circle cx="48" cy="35" r="3.5" fill="url(#g-gold)" filter="url(#glow)"/>
+
+    <text x="48" y="37" font-size="4.5" fill="#B45309" text-anchor="middle" font-weight="bold">$</text>
+
+  </g>
+
+  <g opacity="0.7">
+
+    <circle cx="80" cy="32" r="3" fill="url(#g-gold)" filter="url(#glow)"/>
+
+    <text x="80" y="33.5" font-size="4" fill="#B45309" text-anchor="middle" font-weight="bold">$</text>
+
+  </g>
+
+  <g opacity="0.6">
+
+    <circle cx="70" cy="25" r="2.5" fill="url(#g-gold)" filter="url(#glow)"/>
+
+    <text x="70" y="26.5" font-size="3.5" fill="#B45309" text-anchor="middle" font-weight="bold">$</text>
+
+  </g>
+
+  
+
+  <!-- Success stars -->
+
+  <g opacity="0.5">
+
+    <path d="M22 45 l1.5 3 l3 0.5 l-2 2 l0.5 3 l-3-1.5 l-3 1.5 l0.5-3 l-2-2 l3-0.5 z" fill="#FBBF24"/>
+
+    <path d="M106 48 l1.3 2.5 l2.5 0.5 l-1.8 1.8 l0.5 2.5 l-2.5-1.3 l-2.5 1.3 l0.5-2.5 l-1.8-1.8 l2.5-0.5 z" fill="#FBBF24"/>
+
+    <path d="M64 18 l1.5 3 l3 0.5 l-2 2 l0.5 3 l-3-1.5 l-3 1.5 l0.5-3 l-2-2 l3-0.5 z" fill="#10B981"/>
+
+  </g>
+
+  
+
+  <!-- Curved text along top of circle -->
+
+  <text font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#0F766E" letter-spacing="2">
+
+    <textPath href="#topTextPath" startOffset="50%" text-anchor="middle">
+
+      CHAMACONNECT
+
+    </textPath>
+
+  </text>
+
+  
+
+  <!-- Curved text along bottom of circle -->
+
+  <text font-family="Arial, sans-serif" font-size="6.5" fill="#10B981" letter-spacing="3">
+
+    <textPath href="#bottomTextPath" startOffset="50%" text-anchor="middle">
+
+      TOGETHER WE PROSPER
+
+    </textPath>
+
+  </text>
+
+</svg>

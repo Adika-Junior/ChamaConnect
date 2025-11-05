@@ -17,7 +17,9 @@ class Phase1AuthTest extends TestCase
         $this->actingAs($admin);
 
         $response = $this->postJson('/auth/invite', ['email' => 'alice@institution.ac.ke']);
-        $response->assertStatus(201);
+    // TEMP DEBUG: write response to a log file so we can inspect it after the test
+    @file_put_contents(storage_path('logs/test-response.log'), "RESPONSE BODY: " . $response->getContent() . "\n", FILE_APPEND);
+    $response->assertStatus(201);
 
         $this->assertDatabaseHas('email_verification_tokens', ['email' => 'alice@institution.ac.ke']);
     }
