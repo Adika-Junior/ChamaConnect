@@ -11,11 +11,12 @@ Homestead.json
 Homestead.yaml
 
 # Docker
-/.env.docker
-/.env.docker-compose
-/docker/.env
-/docker/.env.*
+.env.docker
+.env.docker-compose
+docker/.env
+docker/.env.*
 docker-compose.override.yml
+*.env.docker
 
 # Composer
 /vendor/

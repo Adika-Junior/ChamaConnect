@@ -15,16 +15,22 @@ docker build -t ttms_app:latest .
 
 ## 2) Configure Environment
 ```bash
-cp .env.example .env.docker
+cp .env.docker.example .env.docker
 ```
-Edit `.env.docker` with:
-- APP_URL=http://localhost:8000
-- DB_* (host: db, port: 3307 inside compose mapping)
-- REDIS_* (host: redis)
-- REVERB_* (as needed)
-- JANUS_URL / JANUS_WS_URL
-- MPESA_* (Daraja credentials); MPESA_WEBHOOK_SECRET
-- BACKUP_DISK=local (or s3 if configured)
+Edit `.env.docker` with your actual secrets:
+- **DB_ROOT_PASSWORD**: Secure MySQL root password
+- **DB_PASSWORD**: Secure database user password
+- **APP_KEY**: Generate with `php artisan key:generate` (run in workspace container)
+- **APP_URL**: http://localhost:8000
+- **DB_HOST**: db (Docker service name)
+- **REDIS_HOST**: redis (Docker service name)
+- **REVERB_***: WebSocket configuration
+- **JANUS_***: Video conferencing secrets
+- **MPESA_***: M-Pesa Daraja API credentials
+- **SMS_*****: SMS provider credentials
+- **BACKUP_DISK**: local (or s3 if configured)
+
+**Important**: Never commit `.env.docker` to git. It contains sensitive credentials.
 
 ## 3) Initialize
 ```bash

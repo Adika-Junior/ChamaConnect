@@ -16,7 +16,7 @@ services:
     env_file:
       - .env.docker
     healthcheck:
-      test: ["CMD-SHELL", "php -r 'echo \'ok\';' >/dev/null 2>&1 || exit 1"]
+      test: ["CMD-SHELL", "php -r 'echo ok;' >/dev/null 2>&1 || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -42,12 +42,12 @@ services:
     container_name: ttms_db
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: team_task_management
-      MYSQL_USER: ttms_user
-      MYSQL_PASSWORD: ttms_pass
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-changeme}
+      MYSQL_DATABASE: ${DB_DATABASE:-team_task_management}
+      MYSQL_USER: ${DB_USERNAME:-ttms_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-changeme}
     ports:
-      - 3307:3306
+      - ${DB_PORT:-3307}:3306
     volumes:
       - db_data:/var/lib/mysql
     networks:
