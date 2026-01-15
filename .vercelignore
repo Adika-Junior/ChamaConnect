@@ -1,0 +1,57 @@
+# Vercel ignore file - exclude unnecessary files from deployment
+
+# Development files
+.env
+.env.*
+!.env.example
+docker/
+docker-compose.yml
+Dockerfile
+*.md
+!README.md
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Tests
+tests/
+phpunit.xml
+.phpunit.result.cache
+
+# Logs
+*.log
+storage/logs/*
+
+# Cache (will be regenerated)
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+bootstrap/cache/*
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts (keep public/build)
+public/hot
+public/storage
+
+# Scripts
+scripts/
+rebuild.sh
+START_APPLICATION.sh
+
+# Documentation
+docs/
+SECRET_ROTATION.md
+SETUP.md
+REMAINING_FEATURES.md

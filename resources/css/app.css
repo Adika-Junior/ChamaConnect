@@ -1,10 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 /* Import Google Fonts - Professional SaaS Typography */
 /* Primary: Inter (screen-optimized, modern) */
 /* Heading: Plus Jakarta Sans (bold, distinctive) */
 /* Accent: Space Grotesk (technical, geometric) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 /* Brand variables for the site (used in Blade templates) */
 :root{
